@@ -1,0 +1,158 @@
+/* Variables netflix */
+:root {
+    --background-color: #141414;
+    --primary-color: #e50914;
+    --secondary-color: #f40612;
+    --text-color: #e5e5e5;
+    --card-background: #222;
+    --button-disabled-color: #555;
+}
+
+/* Général */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background: var(--background-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+form input {
+    padding: 0.8rem;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 4px;
+    background: var(--card-background);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--secondary-color);
+}
+
+/* Liste des films */
+#movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+#movies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Carte du film */
+#movies-list li {
+    background: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#movies-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#movies-list li img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#movies-list li p {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Pagi */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+nav button {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+nav button:disabled {
+    background: var(--button-disabled-color);
+    cursor: not-allowed;
+}
+
+nav button:hover:not(:disabled) {
+    background: var(--secondary-color);
+}
+
+nav span {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: var(--text-color);
+}
+
+

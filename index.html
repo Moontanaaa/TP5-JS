@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de films</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="./TmdbApi.js" type="module" defer></script>
+    <script src="./script.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Recherche de Films</h1>
+    </header>
+    <main>
+        <form id="search-form">
+            <label for="query">Rechercher un film :</label>
+            <input type="text" id="query" placeholder="Entrez un titre">
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <section id="movies-container">
+            <ul id="movies-list"></ul>
+        </section>
+
+        <nav id="pagination">
+            <button id="prev-page" disabled>Précédent</button>
+            <span id="current-page">1</span>
+            <button id="next-page">Suivant</button>
+        </nav>
+    </main>
+</body>
+
+</html>
